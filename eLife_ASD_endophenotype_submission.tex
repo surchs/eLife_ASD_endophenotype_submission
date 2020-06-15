@@ -82,6 +82,10 @@ We first evaluated the PPV of conformal ASD diagnosis predictions made with high
 \includegraphics[width=\linewidth]{fig1_network}
     \caption{Combining network predictors with correlated conformal scores results in higher prediction performance. Conformal predictions based on individual networks (left column) were not associated with high PPV (c). The predicted ASD conformal scores were correlated between networks (b) and were used to cluster networks into 7 combined predictors (middle column). Clusters predominantly broke down along boundaries of large scale functional brain networks (a). Networks with correlated conformal predictions were further clustered into two large ensemble predictors (right column), that combined predominantly unimodal (blue) and transmodal (orange) brain networks respectively (a, right column). Predictions of the ensemble of more transmodal networks (orange) gave rise to a high risk signature (HRS) that predicted ASD with high PPV (c, top).}
 \label{fig:1_network}
+\figdata{Table of TCP performance of network models}\label{figdata:first}
+\figdata{Table of TCP performance of combined models}\label{figdata:second}
+\figdata{Table of TCP performance of ensemble models}\label{figdata:third}
+\figdata{Correlation matrix of conformal scores}\label{figdata:fourth}
 \end{figure}
 
 \subsection{Functionally similar brain networks predict correlated conformal scores}
@@ -137,6 +141,7 @@ The median of proxy ADOS-CSS was higher among the nine identified individuals wi
     \caption{The HRS identifies individuals with severe symptoms and pervasive underconnectivity.
 a) Individuals identified by the high risk signature (circles with orange outline) have high proxy calibrated ADOS severity scores (left plot) and high raw ADOS total scores (right plot) compared to the average of their respective diagnostic category. Box-plots are based on individuals not identified by the HRS. b) The identified individuals share a pattern of distributed below average functional connectivity of the nine networks driving the high risk signature (the networks are denoted by name and coloured outline on their respective connectivity maps).}
 \label{fig:3_profile}
+\figdata{Table of raw ADOS total and proxy ADOS CSS of individuals in the validation sample.}\label{figdata:fifth}
 \end{figure}
 
 \subsection{High risk signature characterized by underconnectivity}
@@ -149,6 +154,8 @@ To ensure that the conformal scores used to make the high confidence prediction 
 \includegraphics[width=\linewidth]{fig4_nuisance}
     \caption{The conformal predictions are not driven by nuisance covariates. a) The distribution of correlations of ASD conformal scores predicted by individual networks (left) and the two ensemble models (right) with head motion (black) and age (grey) are shown across 100 bootstrap samples. Circles represent the median correlation score across bootstrap samples, vertical lines span the 5th to 25th percentile (lower bar) and 75th to 95th percentile (upper bar) of correlation scores respectively. All median correlation scores are close to zero and enclose zero within the 90\% confidence interval.}
 \label{fig:4_nuisance}
+\figdata{Table of correlation between conformal scores and head motion across bootstrap samples.}\label{figdata:sixth}
+\figdata{Table of correlation between conformal scores and age across bootstrap samples.}\label{figdata:seventh}
 \figsupp{Predictions by the HRS exceed the PPV of those by a simple baseline model. The distribution of PPV estimates across 100 bootstrap samples is denoted by violin plots for each model}{\includegraphics[width=5cm]{fig4_supp_baseline}}\label{figsupp:sf4_PPV}
 \figsupp{The impact of different levels of ASD prevalence in the data are shown for different metrics that are commonly used to evaluate prediction models. In balanced samples (black vertical line) that are commonly used to train models, traditional models (pink lines) that balance sensitivity and specificity achieve high accuracy. However, predictions by traditional models confer lower individual risk (PPV), particularly for low ASD prevalence, close to the baseline rate in the general population (grey lines)}{\includegraphics[width=14cm]{fig4_supp_performance.eps}}\label{figsupp:sf4_perf}
 \end{figure}
